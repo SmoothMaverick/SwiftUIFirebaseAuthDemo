@@ -16,6 +16,13 @@ struct ContentView: View {
                 ) {
                     Text("Custom Authentication")
                 }
+
+
+                NavigationLink(
+                    destination: StockAuthView()
+                ) {
+                    Text("Pre-built Authentication")
+                }
             }
         }
     }

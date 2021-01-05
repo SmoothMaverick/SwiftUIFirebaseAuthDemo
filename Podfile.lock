@@ -18,6 +18,13 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30906.0)
+  - FirebaseUI/Anonymous (9.0.0):
+    - FirebaseUI/Auth
+  - FirebaseUI/Auth (9.0.0):
+    - Firebase/Auth
+    - GoogleUtilities/UserDefaults
+  - FirebaseUI/Email (9.0.0):
+    - FirebaseUI/Auth
   - GoogleDataTransport (8.0.1):
     - nanopb (~> 2.30906.0)
   - GoogleUtilities/AppDelegateSwizzler (7.1.1):
@@ -35,6 +42,8 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.1.1)"
   - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.1.1):
+    - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -45,6 +54,9 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Auth
+  - FirebaseUI/Anonymous
+  - FirebaseUI/Auth
+  - FirebaseUI/Email
 
 SPEC REPOS:
   trunk:
@@ -52,6 +64,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseUI
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
@@ -63,12 +76,13 @@ SPEC CHECKSUMS:
   FirebaseAuth: f82c2cfcc1c107bb0a97735cdbce4eb2a601f710
   FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
   FirebaseCoreDiagnostics: 872cdb9b749b23346dddd5c1014d1babd2257de3
+  FirebaseUI: f0677a1cc235f6da602cbd5c9b5fbbd24544a6b3
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 80b0f89a4d7e9d763542c2b229b4afe994707ac1
+PODFILE CHECKSUM: 8862801f58e56a4fb63c64103f31a9001d660d3d
 
 COCOAPODS: 1.9.3

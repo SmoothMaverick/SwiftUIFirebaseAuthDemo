@@ -7,4 +7,7 @@ target 'DemoAuthFirebase' do
 
   # Pods for DemoAuthFirebase
   pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
+  pod 'FirebaseUI/Anonymous'
 end
