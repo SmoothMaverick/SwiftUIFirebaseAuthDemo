@@ -14,6 +14,10 @@
 		0D92A5D825A3F39100707798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D92A5D725A3F39100707798 /* AppDelegate.swift */; };
 		0D92A5F025A3F5B000707798 /* CustomAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D92A5EF25A3F5B000707798 /* CustomAuthView.swift */; };
 		0D92A5F725A3F6E800707798 /* StockAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D92A5F625A3F6E800707798 /* StockAuthView.swift */; };
+		0DC640AB25C91CA700DC6736 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC640AA25C91CA700DC6736 /* GoogleService-Info.plist */; };
+		0DC640C725C91E6D00DC6736 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC640C625C91E6D00DC6736 /* User.swift */; };
+		0DC640CD25C9206D00DC6736 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC640CC25C9206D00DC6736 /* SessionStore.swift */; };
+		0DC640D125C9222F00DC6736 /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC640D025C9222F00DC6736 /* GoogleDelegate.swift */; };
 		BDAAC2411916122DF15803B8 /* Pods_DemoAuthFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7469509D0F041084BD2D6681 /* Pods_DemoAuthFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		0D92A5D725A3F39100707798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D92A5EF25A3F5B000707798 /* CustomAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthView.swift; sourceTree = "<group>"; };
 		0D92A5F625A3F6E800707798 /* StockAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAuthView.swift; sourceTree = "<group>"; };
+		0DC640AA25C91CA700DC6736 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0DC640C625C91E6D00DC6736 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0DC640CC25C9206D00DC6736 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		0DC640D025C9222F00DC6736 /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		6C92F390C618478F482ABBD5 /* Pods-DemoAuthFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAuthFirebase.debug.xcconfig"; path = "Target Support Files/Pods-DemoAuthFirebase/Pods-DemoAuthFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		7469509D0F041084BD2D6681 /* Pods_DemoAuthFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoAuthFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BA742DAF15BB8B67D14BD1 /* Pods-DemoAuthFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAuthFirebase.release.xcconfig"; path = "Target Support Files/Pods-DemoAuthFirebase/Pods-DemoAuthFirebase.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +73,10 @@
 		0D92A5C525A3F16200707798 /* DemoAuthFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				0D92A5C625A3F16200707798 /* DemoAuthFirebaseApp.swift */,
-				0D92A5D725A3F39100707798 /* AppDelegate.swift */,
-				0D92A5C825A3F16200707798 /* ContentView.swift */,
-				0D92A5EF25A3F5B000707798 /* CustomAuthView.swift */,
-				0D92A5F625A3F6E800707798 /* StockAuthView.swift */,
+				0DC640CF25C9221B00DC6736 /* App */,
+				0DC640C925C91F1F00DC6736 /* View */,
+				0DC640C525C91E5E00DC6736 /* Model */,
+				0DC640AA25C91CA700DC6736 /* GoogleService-Info.plist */,
 				0D92A5CA25A3F16500707798 /* Assets.xcassets */,
 				0D92A5CF25A3F16500707798 /* Info.plist */,
 				0D92A5CC25A3F16500707798 /* Preview Content */,
@@ -83,6 +90,35 @@
 				0D92A5CD25A3F16500707798 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0DC640C525C91E5E00DC6736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DC640C625C91E6D00DC6736 /* User.swift */,
+				0DC640CC25C9206D00DC6736 /* SessionStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DC640C925C91F1F00DC6736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D92A5C825A3F16200707798 /* ContentView.swift */,
+				0D92A5EF25A3F5B000707798 /* CustomAuthView.swift */,
+				0D92A5F625A3F6E800707798 /* StockAuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0DC640CF25C9221B00DC6736 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0D92A5C625A3F16200707798 /* DemoAuthFirebaseApp.swift */,
+				0D92A5D725A3F39100707798 /* AppDelegate.swift */,
+				0DC640D025C9222F00DC6736 /* GoogleDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		9BE152750259DED23BF49C16 /* Frameworks */ = {
@@ -164,6 +200,7 @@
 			files = (
 				0D92A5CE25A3F16500707798 /* Preview Assets.xcassets in Resources */,
 				0D92A5CB25A3F16500707798 /* Assets.xcassets in Resources */,
+				0DC640AB25C91CA700DC6736 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,10 +271,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D92A5D825A3F39100707798 /* AppDelegate.swift in Sources */,
+				0DC640CD25C9206D00DC6736 /* SessionStore.swift in Sources */,
 				0D92A5C925A3F16200707798 /* ContentView.swift in Sources */,
 				0D92A5C725A3F16200707798 /* DemoAuthFirebaseApp.swift in Sources */,
 				0D92A5F725A3F6E800707798 /* StockAuthView.swift in Sources */,
 				0D92A5F025A3F5B000707798 /* CustomAuthView.swift in Sources */,
+				0DC640C725C91E6D00DC6736 /* User.swift in Sources */,
+				0DC640D125C9222F00DC6736 /* GoogleDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

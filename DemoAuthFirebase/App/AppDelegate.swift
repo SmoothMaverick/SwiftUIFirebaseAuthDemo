@@ -7,13 +7,19 @@
 
 import Firebase
 import FirebaseUI
+import GoogleSignIn
 
 class AppDelegate: NSObject, UIApplicationDelegate, FUIAuthDelegate{
+    let googleDelegate = GoogleDelegate()
+
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         FirebaseApp.configure()
+
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = googleDelegate
 
         let authUI = FUIAuth.defaultAuthUI()!
         authUI.delegate = self
@@ -21,6 +27,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, FUIAuthDelegate{
         let providers: [FUIAuthProvider] = [
             FUIEmailAuth(),
             FUIAnonymousAuth(),
+            FUIGoogleAuth(),
         ]
 
         authUI.providers = providers
@@ -37,6 +44,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, FUIAuthDelegate{
         if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
           return true
         }
+
+        GIDSignIn.sharedInstance().handle(url)
 
         return true
     }

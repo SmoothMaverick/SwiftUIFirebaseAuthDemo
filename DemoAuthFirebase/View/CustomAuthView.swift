@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct CustomAuthView: View {
+    @EnvironmentObject var session: SessionStore
     @State var email : String = ""
     @State var password : String = ""
 
@@ -31,36 +32,31 @@ struct CustomAuthView: View {
                 }
             ) {
                 Text("Email SignUp")
-            }
-
+            }.padding()
 
             Button(
                 action: {
-                    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                        if error != nil {
-                            print(error!)
-                        } else {
-                            print("signIn with email")
-                        }
-                    }
+                    session.emailSignIn(email: email, password: password)
                 }
             ) {
                 Text("Email SignIn")
-            }
+            }.padding()
 
             Button(
                 action: {
-                    Auth.auth().signInAnonymously() { (result, error) in
-                        if error != nil {
-                            print(error!)
-                        } else {
-                            print("signIn as guest")
-                        }
-                    }
+                    session.anonSignIn()
                 }
             ) {
                 Text("Guest SignIn")
-            }
+            }.padding()
+
+            Button(
+                action: {
+                    session.googleSignIn()
+                }
+            ) {
+                Text("Google SignIn")
+            }.padding()
         }
     }
 }

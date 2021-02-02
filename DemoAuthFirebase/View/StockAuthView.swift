@@ -45,3 +45,9 @@ extension AuthView.Coordinator {
         }
     }
 }
+
+struct StockAuthView_Previews: PreviewProvider {
+    static var previews: some View {
+        StockAuthView()
+    }
+}

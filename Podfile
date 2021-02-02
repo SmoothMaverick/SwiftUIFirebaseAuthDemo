@@ -6,8 +6,13 @@ target 'DemoAuthFirebase' do
   use_frameworks!
 
   # Pods for DemoAuthFirebase
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
+
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Email'
   pod 'FirebaseUI/Anonymous'
+  pod 'FirebaseUI/Google'
+
+  pod 'GoogleSignIn'
 end
